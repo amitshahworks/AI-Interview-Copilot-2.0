@@ -1,5 +1,11 @@
 function Dashboard() {
-  return <h1>Dashboard Page</h1>;
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <h1 className="text-6xl font-bold">
+        Dashboard Page
+      </h1>
+    </div>
+  );
 }
 
 export default Dashboard;

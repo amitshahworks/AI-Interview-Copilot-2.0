@@ -1,5 +1,11 @@
 function Login() {
-  return <h1>Login Page</h1>;
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <h1 className="text-6xl font-bold">
+        Login Page
+      </h1>
+    </div>
+  );
 }
 
 export default Login;
