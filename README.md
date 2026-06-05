@@ -1,7 +1,29 @@
-PORT=5000
+# AI Interview Copilot 2.0
 
-MONGO_URI=your_mongodb_connection
+AI-powered interview preparation platform.
 
-JWT_SECRET=your_jwt_secret
+## Tech Stack
 
-OPENAI_API_KEY=your_openai_api_key
+Frontend:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+Backend:
+- Node.js
+- Express
+- TypeScript
+- MongoDB
+
+AI:
+- OpenAI API
+
+## Features
+
+- HR Interviews
+- Technical Interviews
+- AI Feedback
+- Resume Upload
+- Voice Analysis
+- Webcam Analysis
