@@ -1,7 +1,9 @@
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   return (
     <div className="flex min-h-screen items-center justify-center">
@@ -13,6 +15,12 @@ function Dashboard() {
         <p className="mt-4">
           Welcome {user?.name}
         </p>
+        <button
+        onClick={() => navigate("/interview/setup")}
+        className="mt-4 rounded border px-6 py-3"
+      >
+        Start Interview
+      </button>
       </div>
     </div>
   );
