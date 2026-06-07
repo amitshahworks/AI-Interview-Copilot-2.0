@@ -26,11 +26,25 @@ function Register() {
       setName("");
       setEmail("");
       setPassword("");
-    } catch (error: any) {
-      alert(
-        error.response?.data?.message ||
-          "Registration failed"
-      );
+    } catch (error) {
+      const errorMessage =
+        typeof error === "object" &&
+        error !== null &&
+        "response" in error &&
+        typeof (error as { response?: { data?: { message?: string } } })
+          .response === "object"
+          ? (error as {
+              response?: {
+                data?: {
+                  message?: string;
+                };
+              };
+            }).response?.data?.message
+          : error instanceof Error
+          ? error.message
+          : null;
+
+      alert(errorMessage || "Registration failed");
     }
   };
 

@@ -31,10 +31,14 @@ function Login() {
       );
 
       navigate("/dashboard");
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const axiosError = error as {
+        response?: { data?: { message?: string } };
+      };
+
       alert(
-        error.response?.data?.message ||
-          "Login failed"
+        axiosError.response?.data?.message ||
+          (error instanceof Error ? error.message : "Login failed")
       );
     }
   };
