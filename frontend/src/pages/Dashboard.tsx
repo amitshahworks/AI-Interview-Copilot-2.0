@@ -12,6 +12,8 @@ function Dashboard() {
           Dashboard
         </h1>
 
+// Display user information
+
         <p className="mt-4">
           Welcome {user?.name}
         </p>
